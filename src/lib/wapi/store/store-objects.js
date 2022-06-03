@@ -90,7 +90,7 @@ export const storeObjects = [
   {
     id: 'ServiceWorker',
     conditions: (module) =>
-      module.default && module.default.killServiceWorker ? module : null
+      module.default && module.default.killServiceWorker ? module : null,
   },
   {
     id: 'Stream',
@@ -229,7 +229,7 @@ export const storeObjects = [
   {
     id: 'MyStatus',
     conditions: (module) =>
-      module.getStatus && module.setMyStatus ? module : null
+      module.getStatus && module.setMyStatus && module.queryStatusAll ? module : null
   },
   {
     id: 'ChatState',
