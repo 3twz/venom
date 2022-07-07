@@ -90,7 +90,7 @@ export const storeObjects = [
   {
     id: 'ServiceWorker',
     conditions: (module) =>
-      module.default && module.default.killServiceWorker ? module : null
+      module.default && module.default.killServiceWorker ? module : null,
   },
   {
     id: 'Stream',
@@ -104,7 +104,14 @@ export const storeObjects = [
   {
     id: 'WapDelete',
     conditions: (module) =>
-      module.sendConversationDelete && module.sendConversationDelete.length == 2
+      module.sendConversationDelete && module.sendConversationDelete.length > 1
+        ? module
+        : null
+  },
+  {
+    id: 'WapDeleteMsg',
+    conditions: (module) =>
+      module.sendRevokeMsgs && module.sendGroupInviteMessage
         ? module
         : null
   },
@@ -114,6 +121,11 @@ export const storeObjects = [
       module.default && module.default.ref && module.default.refTTL
         ? module.default
         : null
+  },
+  {
+     id: "ConversationMsgs",
+     conditions: (module) =>
+       (module.loadEarlierMsgs) ? module : null
   },
   {
     id: 'WapQuery',
@@ -229,7 +241,7 @@ export const storeObjects = [
   {
     id: 'MyStatus',
     conditions: (module) =>
-      module.getStatus && module.setMyStatus ? module : null
+      module.getStatus && module.setMyStatus && module.queryStatusAll ? module : null
   },
   {
     id: 'ChatState',

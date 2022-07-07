@@ -1,3 +1,19 @@
+# [4.2.0](https://github.com/orkestral/venom/compare/v4.1.0...v4.2.0) (2022-06-09)
+
+
+### Bug Fixes
+
+* **wapi:** fix sendFile function issue [#1718](https://github.com/orkestral/venom/issues/1718) ([ed89eb7](https://github.com/orkestral/venom/commit/ed89eb797b78c884898a49d23d33691ee3cb6eb2))
+* Bug Fix send message with media
+
+
+# [4.1.0](https://github.com/orkestral/venom/compare/v4.0.11...v4.1.0) (2022-06-02)
+
+### Features
+
+* Bug Fix e.isUser
+* Change target TS
+
 ## [4.0.11](https://github.com/orkestral/venom/compare/v4.0.10...v4.0.11) (2022-04-27)
 
 
