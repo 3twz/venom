@@ -70,7 +70,7 @@ export async function deleteMessagesMe(chatId, messageArray, revoke) {
   );
 
   if (revoke) {
-    conversation.sendRevokeMsgs(messagesToDelete, "Sender", true);
+    conversation.sendRevokeMsgs(messagesToDelete, 'Sender', true);
   } else {
     conversation.sendDeleteMsgs(messagesToDelete, true);
   }

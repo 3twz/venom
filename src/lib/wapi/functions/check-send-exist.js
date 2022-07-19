@@ -144,7 +144,6 @@ export function sendCheckType(chatId = undefined) {
         'incorrect parameters! Use as an example: 00000000-000000@g.us or 00000000000000@g.us'
       );
     }
-    
     if (!Store.WidFactory.isWidlike(chatId)) {
       return WAPI.scope(
         chatId,
